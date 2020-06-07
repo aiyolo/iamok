@@ -32,7 +32,7 @@ crontab -e
 
 在最后一行添加:
 
-`* * * * * * python ~/iamok/iamok.py >> ~/iamok/iamok.log 2>&1`
+`* * * * * python ~/iamok/iamok.py >> ~/iamok/iamok.log 2>&1`
 
 即每隔一分钟执行一次`python iamok.py`, 并且把输出重定向到`iamok.log`
 
@@ -52,4 +52,4 @@ crontab -e
 
 如下，设置成每天8点执行一次
 
-`0 8 * * * * python ~/iamok/iamok.py >> ~/iamok/iamok.log 2>&1`
+`0 8 * * * python ~/iamok/iamok.py >> ~/iamok/iamok.log 2>&1`
