@@ -10,6 +10,8 @@
 git clone https://gitee.com/aiyolo/iamok
 ```
 
+建议放在用户目录下
+
 ### 2、安装依赖
 
 ```bash
@@ -28,11 +30,13 @@ pip install -r requirements.txt
 crontab -e
 ```
 
-在最后一行添加
+在最后一行添加:
 
-`0 8 * * * python ~/iamok/iamok.py >> ~/iamok/iamok.log 2>&1`
+`* * * * * * python ~/iamok/iamok.py >> ~/iamok/iamok.log 2>&1`
 
-即每天8点执行一次`python iamok.py`, 并且把输出重定向到`iamok.log`
+即每隔一分钟执行一次`python iamok.py`, 并且把输出重定向到`iamok.log`
+
+(注意：对应好依赖环境中的python 版本，以及py文件位置)
 
 ### 5、验证是否成功
 
@@ -44,3 +48,8 @@ crontab -e
 {"code":200,"msg":"成功","data":null,"totalPage":0,"totalSize":0}
 ```
 
+如果没问题的话，把crontab任务执行时间重新修改一下：
+
+如下，设置成每天8点执行一次
+
+`0 8 * * * * python ~/iamok/iamok.py >> ~/iamok/iamok.log 2>&1`
