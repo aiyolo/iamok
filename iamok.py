@@ -15,8 +15,8 @@ print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 #iamok文件夹所在路径
 iamok_path = '/home/aiyolo/iamok'
 #账户信息
-user = os.environ["scut_username"]
-passwd = os.environ["scut_password"]
+user = os.environ["SCUT_USERNAME"]
+passwd = os.environ["SCUT_PASSWORD"]
 
 #创建session
 session = requests.Session()
