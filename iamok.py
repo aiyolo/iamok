@@ -13,7 +13,7 @@ print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 # }
 
 #iamok文件夹所在路径
-iamok_path = '/home/aiyolo/iamok'
+# iamok_path = '/home/aiyolo/iamok'
 #账户信息
 user = os.environ["SCUT_USERNAME"]
 passwd = os.environ["SCUT_PASSWORD"]
@@ -30,7 +30,8 @@ r = session.get(url_1)
 lt = re.findall('name="lt" value="(.*?)"', r.text)[0]
 execution = re.findall('name="execution" value="(.*?)"', r.text)[0]
 
-with open(os.path.join(iamok_path,'des.js')) as f:
+# with open(os.path.join(iamok_path,'des.js')) as f:
+with open('des.js') as f:
     ctx = execjs.compile(f.read())
 string1 = user + passwd + lt
 rsa = ctx.call('strEnc', string1, '1', '2', '3')
