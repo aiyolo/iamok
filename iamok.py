@@ -1,6 +1,7 @@
 #_*_coding: utf-8 _*_
 import time
 import requests
+import json
 import re
 import os
 import execjs
@@ -59,7 +60,7 @@ code = 500
 if __name__ == "__main__":
     while code != 200:
         output = submit()
-        code = eval(output.text)["code"]
+        code = json.loads(output.text)["code"]
     print("您已成功提交健康信息！")
     
 
