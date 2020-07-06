@@ -27,7 +27,7 @@ jobs:
         pip install -r requirements.txt
     - name: Build and publish
       env:
-        TWINE_USERNAME: ${{ secrets.SCUT_USERNAME }}
-        TWINE_PASSWORD: ${{ secrets.SCUT_PASSWORD }}
+        SCUT_USERNAME: ${{ secrets.SCUT_USERNAME }}
+        SCUT_PASSWORD: ${{ secrets.SCUT_PASSWORD }}
       run: |
         python iamok.py
