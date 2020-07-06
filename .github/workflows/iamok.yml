@@ -25,7 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Build and publish
+    - name: Submit health information
       env:
         SCUT_USERNAME: ${{ secrets.SCUT_USERNAME }}
         SCUT_PASSWORD: ${{ secrets.SCUT_PASSWORD }}
