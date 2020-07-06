@@ -65,8 +65,3 @@ if __name__ == "__main__":
     
 
 
-#载入本地cookie
-# s = requests.session()
-# s.cookies = cj.LWPCookieJar(filename='cookies.txt')
-# s.cookies.load(filename='cookies.txt', ignore_discard=True)
-

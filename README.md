@@ -4,11 +4,11 @@
 
 ## 原理
 
-requests模拟登陆 + github workflows 定时执行任务
+requests模拟登陆 + github workflows 定时执行任务 (注意：workflows 用的是UTC时间，比北京时间慢8个小时)
 
 ## 使用方法
 
-fork 本项目，然后在你的 `setttings` 页面创建下面两个`key`保存你的学号和密码即可。
+fork 本项目，然后在你的 `settings` 页面创建下面两个`key`保存你的学号和密码即可。
 
 ![](assets/iShot2020-07-0623.39.33.png)
 
