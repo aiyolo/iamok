@@ -59,7 +59,7 @@ code = 500
 if __name__ == "__main__":
     while code != 200:
         output = submit()
-        code = output.text["code"]
+        code = eval(output.text)["code"]
     print("您已成功提交健康信息！")
     
 
