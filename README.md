@@ -4,7 +4,7 @@
 
 ## 原理
 
-requests模拟登陆 + github workflows 定时执行任务 (注意：workflows 用的是UTC时间，比北京时间慢8个小时)
+requests模拟登陆 + github workflows 定时执行任务
 
 ## 使用方法
 
